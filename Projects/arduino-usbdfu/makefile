@@ -1,6 +1,6 @@
 # Hey Emacs, this is a -*- makefile -*-
 #----------------------------------------------------------------------------
-# WinAVR Makefile Template written by Eric B. Weddington, Jörg Wunsch, et al.
+# WinAVR Makefile Template written by Eric B. Weddington, Jï¿½rg Wunsch, et al.
 #  >> Modified for use with the LUFA project. <<
 #
 # Released to the Public Domain
@@ -49,7 +49,7 @@
 
 # MCU name
 MCU = atmega8u2
-MCU_AVRDUDE = at90usb82
+MCU_AVRDUDE = m16u2
 
 # Specify the Arduino model using the assigned PID.  This is used by Descriptors.c
 #   to set the product descriptor string (for DFU we must use the PID for each
@@ -358,10 +358,10 @@ AVRDUDE_LOCK = -U lock:w:0x0F:m
 # Type: avrdude -c ?
 # to get a full listing.
 #
-AVRDUDE_PROGRAMMER = avrispmkii
+AVRDUDE_PROGRAMMER = stk500v1
 
 # com1 = serial port. Use lpt1 to connect to parallel port.
-AVRDUDE_PORT = usb
+AVRDUDE_PORT = /dev/ttyUSB0
 
 AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 #AVRDUDE_WRITE_EEPROM = -U eeprom:w:$(TARGET).eep

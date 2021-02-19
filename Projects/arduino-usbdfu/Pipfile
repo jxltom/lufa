@@ -1,0 +1,3 @@
+[scripts]
+build = "make"
+upload = "avrdude -cstk500v1 -p m16u2 -P/dev/ttyUSB0 -b19200 -v -U flash:w:Arduino-usbdfu.hex"

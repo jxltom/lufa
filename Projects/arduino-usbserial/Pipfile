@@ -1,0 +1,4 @@
+[scripts]
+build = "make"
+upload = "avrdude -cstk500v1 -p m16u2 -P/dev/ttyUSB0 -b19200 -v -U flash:w:Arduino-usbserial.hex"
+upload-combined = "avrdude -cstk500v1 -p m16u2 -P/dev/ttyUSB0 -b19200 -v -U flash:w:Arduino-COMBINED-dfu-usbserial-atmega16u2-Uno-Rev3.hex"
